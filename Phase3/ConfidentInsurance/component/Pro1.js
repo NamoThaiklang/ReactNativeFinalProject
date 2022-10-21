@@ -1,17 +1,52 @@
-import { StyleSheet, Text, View,SafeAreaView,Image } from 'react-native'
-import React from 'react'
+import {Text, View, SafeAreaView, Image ,Button} from "react-native";
+import React from "react";
+import {styles} from "./style.js";
 
-const Pro1 = () => {
+const Pro1 = ({navigation}) => {
   return (
     <SafeAreaView>
-    <View>
-      
-      <Text>Pro1</Text>
+    <View style={styles.container}>
+    <View style={styles.imageStack}>
+      <Image
+        source={require("../assets/img1.png")}
+        resizeMode="contain"
+        style={styles.image}
+      ></Image>
+      <Text style={styles.Profile}>
+        เลขบัตรประชาชน 1234567890111{"\n"}นาย A B{"\n"}สัญญาเพิ่มเติมประกัน
+        สุขภาพซูเปอร์แคร์ แผน XXL{"\n"}บริษทั เอฟดับบลิวดีประกันชีวิต จำกัด
+        (มหาชน)
+      </Text>
     </View>
-    </SafeAreaView>
-  )
-}
+    <Text style={styles.Head}>สิทธิประโยชน์ที่ได้รับ</Text>
+    <View style={styles.Detail}>
+      <Text>
+      1.ค่าห้อง ค่าอาหาร ต่อวัน (สูงสุด 125 วัน)(7,500) {"\n"}
+      2.ค่าห้อง ไอ.ซี.ยู. ต่อวัน (สูงสุด 30วัน นับจ านวนวันรวมกับค่าห้อง ค่าอาหาร)(15,000)
+      3.ค่าบริการพยาบาล ค่ารักษาพยาบาลอื่นๆ ในโรงพยาบาล หรือสถานพยาบาลเวชกรรม ค่ารักษาพยาบาลต่อเนื่องหลังออกจากโรงพยาบาล (OPD follow up)(65,000){"\n"}
+      4.ค่าแพทย์ผ่าตัดและหัตถการ ค่าห้องผ่าตัดและอุปกรณ์ในห้องผ่าตัด ค่าแพทย์ วิสัญญี(180,000){"\n"}
+      5.ค่าตรวจวินิจฉัยทางรังสีวิทยาและการตรวจทางห้องปฏิบัติการผู้ป่ าวยนอก(10,000){"\n"}
+      6.ค่าแพทย์ตรวจรักษาต่อวัน (สูงสุด 125 วัน)(1,500){"\n"}
+      7.ค่ารักษาพยาบาลฉุกเฉินขณะเป็นผู้ป่วยนอก (เนื่องจากอุบัติเหตุ)(20,000){"\n"}
+      8.ค่าบริการทางกายภาพบำบัดกรณีผู้ป่ วยนอกภายใน 30 วัน หลังออกจากโรงพยาบาล (สูงสุด 7 ครั้ง)(2,000){"\n"}
+      9.ค่าปรึกษาแพทย์เชี่ยวชาญเฉพาะทาง(4,000){"\n"}
+      10.ค่าปรึกษาแพทย์เชี่ยวชาญเฉพาะทางค่าตรวจวินิจฉัยทางรังสีพิเศษ (CT scan, MRI)(15,000){"\n"}
+      11.ค่าล้างไต กรณีผู้ป่วยนอก (ต่อปี กรมธรรม์)(100,000){"\n"}
+      12.ค่าเคมีบำบัดและรังสีบำบัดกรณีผู้ป่วยนอก (ต่อปี กรมธรรม์)(150,000){"\n"}
+      13.ค่ารักษาพยาบาลการขยายหลอดเลือดหัวใจด้วยบอลลูน (ต่อปี กรมธรรม์)(200,000){"\n"}{"\n"}
 
-export default Pro1
+      ผลประโยชน์สูงสุดต่อครั้ง 2,108,000 บาท
+      </Text>
+    </View>
+    
+    <Button
+        title='กลับ'
+        onPress={()=>navigation.navigate("Home")}
+        color='#48ccc4'
+        />
+  </View>
+  </SafeAreaView>
+  );
+};
 
-const styles = StyleSheet.create({})
+export default Pro1;
