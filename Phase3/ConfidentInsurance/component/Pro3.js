@@ -53,12 +53,13 @@ const Pro3 = ({ navigation }) => {
           ต่อการเข้าพักรักษาตัวครั้งใดครั้งหนึ่ง)(5,000) {"\n"}
           5. ผลประโยชน์เงินช่วยเหลือกรณีเสียชีวิต(10,000){"\n"}
         </Text>
-      </View>
+      </View >
+      <View style={styles.Button}>
       <Button
         title="กลับ"
         onPress={() => navigation.navigate("Home")}
-        color="#48ccc4"
-      />
+        color="#d4ac66"
+      /></View>
     </View>
   );
 };
