@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, SafeAreaView, TextInput,Button} from 'react-native';
+import {StyleSheet, Text, View, SafeAreaView, TextInput,Button,Image} from 'react-native';
 import React, {useState} from 'react';
 
 const Home = ({navigation}) => {
@@ -18,7 +18,11 @@ const Home = ({navigation}) => {
 
   return (
      <View style={styles.centered}>
-      <Text style={styles.title}>Confident Insurance</Text>
+      <Image
+            source={require("../assets/logo.png")}
+            resizeMode="contain"
+            style={styles.image}
+          />
       <TextInput
           value={ID}
           onChangeText={ID => setID(ID)}
@@ -28,7 +32,7 @@ const Home = ({navigation}) => {
         <Button
         title='ค้นหา'
         onPress={()=>checkID(ID)}
-        color='#48ccc4'
+        color='#d4ac66'
         />
     </View>
   );
@@ -41,6 +45,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: "#262626",
+  },
+  image: {
+    width: 430,
+    height: 130,
   },
   title: {
     fontSize: 30,
